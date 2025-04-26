@@ -317,21 +317,7 @@ const HomePage = ({ openImageModal, openCardModal, openVideoModal }) => {
       <br/>
       <br/>
       <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
+   
 
       <div className="hero">
         <img
