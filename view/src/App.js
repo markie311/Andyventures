@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import "./App.css"
 import { BookOpen, Map, Home, User, Video, Menu, X, ExternalLink, Play } from "lucide-react"
 
@@ -155,6 +155,16 @@ function App() {
 }
 
 const HomePage = ({ openImageModal, openCardModal, openVideoModal }) => {
+  const [showTagline, setShowTagline] = useState(false);
+
+  useEffect(() => {
+    // Trigger the animation after component mount
+    const timer = setTimeout(() => {
+      setShowTagline(true);
+    }, 2000); // 2 seconds as requested
+
+    return () => clearTimeout(timer);
+  }, []);
 
   const bookReviewContent = (
     <div className="modal-article">
@@ -192,7 +202,7 @@ const HomePage = ({ openImageModal, openCardModal, openVideoModal }) => {
         </div>
       </div>
     </div>
-  )
+  );
 
   const travelArticleContent = (
     <div className="modal-article">
@@ -229,7 +239,7 @@ const HomePage = ({ openImageModal, openCardModal, openVideoModal }) => {
         </p>
       </div>
     </div>
-  )
+  );
 
   const vlogArticleContent = (
     <div className="modal-article">
@@ -279,10 +289,50 @@ const HomePage = ({ openImageModal, openCardModal, openVideoModal }) => {
         </p>
       </div>
     </div>
-  )
+  );
 
   return (
     <div className="page home-page">
+
+      <div className="brand-header">
+        <div className={`welcome-animation-container ${showTagline ? 'show-tagline' : ''}`}>
+          <div className="name-container">
+            <div className="andy-container">
+              <h1 className="big-text">ANDY</h1>
+              <h2 className="small-text">Hi, I'm</h2>
+            </div>
+            <div className="bon-container">
+              <h1 className="big-text">BON</h1>
+            </div>
+          </div>
+          
+          <div className="tagline-container">
+            <h1 className="tagline">
+              LET'S MAKE SOMETHING SPECIAL AND HAVE A LITTLE FUN ALONG THE WAY
+            </h1>
+          </div>
+        </div>
+      </div>
+
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+
       <div className="hero">
         <img
           src="/images/andybon.jpg"
@@ -305,7 +355,7 @@ const HomePage = ({ openImageModal, openCardModal, openVideoModal }) => {
             <button className="btn">Read More</button>
           </div>
           <div className="card-hover-info">
-            <ExternalLink size={24} />
+            <span className="icon">↗</span>
             <span>View Full Article</span>
           </div>
         </div>
@@ -318,7 +368,7 @@ const HomePage = ({ openImageModal, openCardModal, openVideoModal }) => {
             <button className="btn">See Photos</button>
           </div>
           <div className="card-hover-info">
-            <ExternalLink size={24} />
+            <span className="icon">↗</span>
             <span>View Full Article</span>
           </div>
         </div>
@@ -331,7 +381,7 @@ const HomePage = ({ openImageModal, openCardModal, openVideoModal }) => {
             <button className="btn">Watch Now</button>
           </div>
           <div className="card-hover-info">
-            <Play size={24} />
+            <span className="icon">▶</span>
             <span>Watch Video</span>
           </div>
         </div>
@@ -346,8 +396,9 @@ const HomePage = ({ openImageModal, openCardModal, openVideoModal }) => {
         </div>
       </section>
     </div>
-  )
-}
+  );
+};
+
 
 const AboutPage = ({ openImageModal }) => (
   <div className="page about-page">

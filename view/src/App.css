@@ -107,6 +107,24 @@ main {
   animation: fadeIn 0.5s ease-in-out;
 }
 
+.homepage-welcomeintroduction {
+position:relative;
+border:1vh solid red;
+height:100vh;
+width:100%;
+display:flex;
+flex-direction:column;
+}
+
+#homepage-welcomeintroduction-andyheaderindication {
+position:relative;
+font-size:50px;
+}
+
+#homepage-welcomeintroduction-bonheaderindication {
+position:relative;
+}
+
 .page-title {
   position: relative;
   display: inline-block;
@@ -1501,5 +1519,366 @@ h2:hover::after {
 }
 
 
+/* Base styles */
+:root {
+  --primary-color: #e45545;
+  --secondary-color: #f3c7ba;
+  --text-color: #333;
+  --light-text: #fff;
+  --transition-time: 0.5s;
+}
 
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-color);
+}
 
+.page {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Brand Header Animation Styles */
+.brand-header {
+  background-color: var(--primary-color);
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.welcome-animation-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.name-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  opacity: 1;
+  transition: opacity 1s ease-out;
+}
+
+.welcome-animation-container.show-tagline .name-container {
+  opacity: 0;
+}
+
+.andy-container {
+  display: flex;
+  align-items: flex-end;
+}
+
+.big-text {
+  font-size: 8rem;
+  font-weight: 700;
+  color: var(--secondary-color);
+  margin: 0;
+  line-height: 0.9;
+  text-transform: uppercase;
+}
+
+.small-text {
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--secondary-color);
+  margin: 0 1rem 1.5rem 0;
+  font-style: italic;
+}
+
+.bon-container {
+  align-self: flex-end;
+}
+
+.tagline-container {
+  position: absolute;
+  opacity: 0;
+  transition: opacity 1s ease-in;
+  text-align: center;
+  width: 80%;
+  max-width: 1200px;
+}
+
+.welcome-animation-container.show-tagline .tagline-container {
+  opacity: 1;
+}
+
+.tagline {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--secondary-color);
+  margin: 0;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 70vh;
+  overflow: hidden;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-time);
+  cursor: pointer;
+}
+
+.hero-image:hover {
+  transform: scale(1.05);
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--light-text);
+  text-align: center;
+  padding: 0 2rem;
+}
+
+.animated-text {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  animation: fadeInUp 1.5s ease;
+}
+
+.animated-text-delay {
+  font-size: 1.5rem;
+  animation: fadeInUp 1.5s ease 0.5s both;
+}
+
+/* Featured Content Section */
+.featured-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 4rem 2rem;
+  background-color: #f9f9f9;
+}
+
+.featured-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform var(--transition-time), box-shadow var(--transition-time);
+  cursor: pointer;
+  position: relative;
+}
+
+.featured-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.featured-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 1.5rem;
+}
+
+.card-content h3 {
+  margin-top: 0;
+  color: var(--primary-color);
+}
+
+.btn {
+  background-color: var(--primary-color);
+  color: var(--light-text);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color var(--transition-time);
+}
+
+.btn:hover {
+  background-color: #c03a2a;
+}
+
+.card-hover-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(228, 85, 69, 0.9);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--light-text);
+  opacity: 0;
+  transition: opacity var(--transition-time);
+}
+
+.featured-card:hover .card-hover-info {
+  opacity: 1;
+}
+
+.icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Newsletter Section */
+.newsletter {
+  background: linear-gradient(135deg, #e45545 0%, #c03a2a 100%);
+  color: var(--light-text);
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.glow-text {
+  font-size: 2.5rem;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  margin-bottom: 1rem;
+}
+
+.newsletter-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  max-width: 600px;
+  margin: 2rem auto 0;
+}
+
+.animated-input {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 30px;
+  flex-grow: 1;
+  min-width: 250px;
+  font-size: 1rem;
+  transition: box-shadow var(--transition-time);
+}
+
+.animated-input:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
+}
+
+.pulse-btn {
+  animation: pulse 2s infinite;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .big-text {
+    font-size: 6rem;
+  }
+  
+  .tagline {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .big-text {
+    font-size: 4rem;
+  }
+  
+  .small-text {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .tagline {
+    font-size: 2rem;
+  }
+  
+  .animated-text {
+    font-size: 2rem;
+  }
+  
+  .animated-text-delay {
+    font-size: 1.2rem;
+  }
+  
+  .hero {
+    height: 50vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .big-text {
+    font-size: 3rem;
+  }
+  
+  .small-text {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .tagline {
+    font-size: 1.5rem;
+  }
+  
+  .brand-header {
+    height: 80vh;
+  }
+  
+  .featured-content {
+    grid-template-columns: 1fr;
+    padding: 2rem 1rem;
+  }
+  
+  .newsletter {
+    padding: 2rem 1rem;
+  }
+  
+  .glow-text {
+    font-size: 2rem;
+  }
+}
