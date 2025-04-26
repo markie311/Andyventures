@@ -1882,3 +1882,31 @@ body {
     font-size: 2rem;
   }
 }
+
+.playlist-modal-content {
+  max-width: 800px;
+  max-height: 80vh;
+  overflow-y: auto;
+  padding: 2rem;
+}
+
+.playlist-videos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.playlist-modal-count {
+  color: #777;
+  margin-bottom: 1.5rem;
+}
+
+.playlist-video-item {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.playlist-video-item:hover {
+  transform: translateY(-5px);
+}

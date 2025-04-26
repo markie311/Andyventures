@@ -445,7 +445,7 @@ const BooksPage = ({ openCardModal }) => {
       rating: "★★★★☆",
       excerpt:
         "A thought-provoking exploration of the infinite possibilities our lives could take, discovered while traveling through Northern Europe...",
-      cover: "/images/andybon.jpg",
+      cover: "/images/andybon1.jpg",
     },
     {
       title: "Atomic Habits",
@@ -453,7 +453,7 @@ const BooksPage = ({ openCardModal }) => {
       rating: "★★★★★",
       excerpt:
         "A practical guide to building good habits and breaking bad ones, which helped me establish routines while constantly on the move...",
-      cover: "/images/andybon.jpg",
+      cover: "/images/andybon2.jpg",
     },
     {
       title: "Educated",
@@ -461,7 +461,7 @@ const BooksPage = ({ openCardModal }) => {
       rating: "★★★★☆",
       excerpt:
         "A memoir about the transformative power of education, which resonated with my own journey of self-discovery through travel...",
-      cover: "/images/andybon.jpg",
+      cover: "/images/andybon3.jpg",
     },
     {
       title: "Sapiens",
@@ -469,7 +469,7 @@ const BooksPage = ({ openCardModal }) => {
       rating: "★★★★★",
       excerpt:
         "A fascinating look at human history that changed my perspective during my travels through historical sites in the Middle East...",
-      cover: "/images/andybon.jpg",
+      cover: "/images/andybon4.jpg",
     },
     {
       title: "The Alchemist",
@@ -477,7 +477,7 @@ const BooksPage = ({ openCardModal }) => {
       rating: "★★★★☆",
       excerpt:
         "A spiritual fable about following your dreams that inspired me to take the leap into full-time travel and remote work...",
-      cover: "/images/andybon.jpg",
+      cover: "/images/andybon5.jpg",
     },
     {
       title: "Digital Minimalism",
@@ -485,7 +485,7 @@ const BooksPage = ({ openCardModal }) => {
       rating: "★★★★☆",
       excerpt:
         "A thoughtful examination of our relationship with technology that helped me balance connectivity with presence during my travels...",
-      cover: "/images/andybon.jpg",
+      cover: "/images/andybon6.jpg",
     },
   ]
 
@@ -579,12 +579,13 @@ const BooksPage = ({ openCardModal }) => {
 }
 
 const TravelPage = ({ openImageModal, openCardModal }) => {
+
   const travelImages = [
-    { src: "/images/andybon.jpg", alt: "City skyline" },
-    { src: "/images/andybon.jpg", alt: "Street scene" },
-    { src: "/images/andybon.jpg", alt: "Cafe" },
-    { src: "/images/andybon.jpg", alt: "Bookstore" },
-    { src: "/images/andybon.jpg", alt: "Sunset view" },
+    { src: "/images/andybon6.jpg", alt: "City skyline" },
+    { src: "/images/andybon7.jpg", alt: "Street scene" },
+    { src: "/images/andybon8.jpg", alt: "Cafe" },
+    { src: "/images/andybon9.jpg", alt: "Bookstore" },
+    { src: "/images/andybon10.jpg", alt: "Sunset view" },
   ]
 
   const generateTravelModal = (title, date) => (
@@ -650,10 +651,10 @@ const TravelPage = ({ openImageModal, openCardModal }) => {
 
       <div className="travel-map">
         <img
-          src="/images/andybon.jpg"
+          src="/images/andybon6.jpg"
           alt="World map with pins"
           className="map-image clickable-image"
-          onClick={() => openImageModal("/images/andybon.jpg", "World map with pins")}
+          onClick={() => openImageModal("/images/andybon6.jpg", "World map with pins")}
         />
         <p>Interactive map coming soon! Explore all the places I've visited.</p>
       </div>
@@ -662,9 +663,9 @@ const TravelPage = ({ openImageModal, openCardModal }) => {
         <div className="travel-entry fade-in-card">
           <div className="travel-images">
             <img
-              src="/images/andybon.jpg"
+              src="/images/andybon7.jpg"
               alt="City skyline"
-              onClick={() => openImageModal("/images/andybon.jpg", "City skyline")}
+              onClick={() => openImageModal("/images/andybon7.jpg", "City skyline")}
               className="clickable-image"
             />
             <div className="image-grid">
@@ -719,34 +720,34 @@ const TravelPage = ({ openImageModal, openCardModal }) => {
         <div className="travel-entry fade-in-card">
           <div className="travel-images">
             <img
-              src="/images/andybon.jpg"
+              src="/images/andybon8.jpg"
               alt="Beach view"
-              onClick={() => openImageModal("/images/andybon.jpg", "Beach view")}
+              onClick={() => openImageModal("/images/andybon8.jpg", "Beach view")}
               className="clickable-image"
             />
             <div className="image-grid">
               <img
-                src="/images/andybon.jpg"
+                src="/images/andybon9.jpg"
                 alt="Remote workspace"
-                onClick={() => openImageModal("/images/andybon.jpg", "Remote workspace")}
+                onClick={() => openImageModal("/images/andybon9.jpg", "Remote workspace")}
                 className="clickable-image"
               />
               <img
-                src="/images/andybon.jpg"
+                src="/images/andybon10.jpg"
                 alt="Beach sunset"
-                onClick={() => openImageModal("/images/andybon.jpg", "Beach sunset")}
+                onClick={() => openImageModal("/images/andybon10.jpg", "Beach sunset")}
                 className="clickable-image"
               />
               <img
-                src="/images/andybon.jpg"
+                src="/images/andybon11.jpg"
                 alt="Local market"
-                onClick={() => openImageModal("/images/andybon.jpg", "Local market")}
+                onClick={() => openImageModal("/images/andybon11.jpg", "Local market")}
                 className="clickable-image"
               />
               <img
-                src="/images/andybon.jpg"
+                src="/images/andybon12.jpg"
                 alt="Beachside reading"
-                onClick={() => openImageModal("/images/andybon.jpg", "Beachside reading")}
+                onClick={() => openImageModal("/images/andybon12.jpg", "Beachside reading")}
                 className="clickable-image"
               />
             </div>
@@ -826,6 +827,68 @@ const VlogsPage = ({ openVideoModal }) => {
     "fJ9rUzIMcZQ",
   ]
 
+  // Define playlists with their videos
+  const playlists = [
+    {
+      title: "Bookstore Tours Around the World",
+      count: 12,
+      thumbnail: "/images/andybon.jpg",
+      videos: [
+        { id: "dQw4w9WgXcQ", title: "Unique Bookstore in Prague", duration: "8:24", date: "March 12, 2025" },
+        { id: "jNQXAC9IVRw", title: "Historic Library in Budapest", duration: "10:15", date: "February 28, 2025" },
+        { id: "9bZkp7q19f0", title: "Beach Reading Spot in Bali", duration: "7:32", date: "January 15, 2025" },
+        { id: "kJQP7kiw5Fk", title: "London's Secret Book Cafe", duration: "9:47", date: "December 10, 2024" }
+        // You would add more videos to reach the full count of 12
+      ]
+    },
+    {
+      title: "Remote Work Setup Tours",
+      count: 8,
+      thumbnail: "/images/andybon2.jpg",
+      videos: [
+        { id: "FTQbiNvZqaY", title: "My Beachfront Office in Bali", duration: "11:03", date: "January 20, 2025" },
+        { id: "fJ9rUzIMcZQ", title: "Coworking in Prague", duration: "8:19", date: "March 15, 2025" },
+        { id: "9bZkp7q19f0", title: "Coffee Shop Setup in Tokyo", duration: "7:45", date: "November 5, 2024" }
+        // You would add more videos to reach the full count of 8
+      ]
+    },
+    {
+      title: "Reading Vlogs From Different Countries",
+      count: 15,
+      thumbnail: "/images/andybon3.jpg",
+      videos: [
+        { id: "dQw4w9WgXcQ", title: "Reading in Prague Gardens", duration: "9:12", date: "March 18, 2025" },
+        { id: "jNQXAC9IVRw", title: "Book Discussion on Bali Beach", duration: "12:45", date: "January 25, 2025" },
+        { id: "kJQP7kiw5Fk", title: "Reviewing Books in Paris", duration: "10:33", date: "October 12, 2024" }
+        // You would add more videos to reach the full count of 15
+      ]
+    },
+    {
+      title: "Travel Day Routines",
+      count: 6,
+      thumbnail: "/images/andybon4.jpg",
+      videos: [
+        { id: "FTQbiNvZqaY", title: "Airport to Beach Villa in Bali", duration: "14:22", date: "January 5, 2025" },
+        { id: "fJ9rUzIMcZQ", title: "Train Journey Through Europe", duration: "16:05", date: "March 10, 2025" },
+        { id: "9bZkp7q19f0", title: "Packing My Digital Nomad Setup", duration: "8:37", date: "December 28, 2024" }
+        // You would add more videos to reach the full count of 6
+      ]
+    }
+  ]
+
+  // State for playlist modal
+  const [playlistModal, setPlaylistModal] = useState({ isOpen: false, playlist: null });
+
+  const openPlaylistModal = (playlist) => {
+    setPlaylistModal({ isOpen: true, playlist });
+    document.body.style.overflow = "hidden";
+  };
+
+  const closePlaylistModal = () => {
+    setPlaylistModal({ isOpen: false, playlist: null });
+    document.body.style.overflow = "auto";
+  };
+
   return (
     <div className="page vlogs-page">
       <h1 className="page-title">Video Journals</h1>
@@ -849,7 +912,7 @@ const VlogsPage = ({ openVideoModal }) => {
         {videoIds.map((videoId, index) => (
           <div className="vlog-card fade-in-card" key={index} onClick={() => openVideoModal(videoId)}>
             <div className="video-thumbnail">
-              <img src={`/images/andybon.jpg`} alt={`Video thumbnail ${index + 1}`} />
+              <img src={`/images/andybon${index + 1}.jpg`} alt={`Video thumbnail ${index + 1}`} />
               <div className="play-button-small">
                 <Play size={24} />
               </div>
@@ -868,52 +931,62 @@ const VlogsPage = ({ openVideoModal }) => {
       <div className="vlog-playlists">
         <h2 className="glow-text">Playlists</h2>
         <div className="playlist-cards">
-          <div className="playlist-card">
-            <img src="/images/andybon.jpg" alt="Playlist thumbnail" />
-            <div className="playlist-overlay">
-              <div className="playlist-count">12 videos</div>
-              <div className="playlist-icon">
-                <Play size={24} />
+          {playlists.map((playlist, index) => (
+            <div 
+              key={index} 
+              className="playlist-card" 
+              onClick={() => openPlaylistModal(playlist)}
+            >
+              <img src={playlist.thumbnail} alt={`${playlist.title} thumbnail`} />
+              <div className="playlist-overlay">
+                <div className="playlist-count">{playlist.count} videos</div>
+                <div className="playlist-icon">
+                  <Play size={24} />
+                </div>
               </div>
+              <h3>{playlist.title}</h3>
+              <p>{playlist.count} videos</p>
             </div>
-            <h3>Bookstore Tours Around the World</h3>
-            <p>12 videos</p>
-          </div>
-          <div className="playlist-card">
-            <img src="/images/andybon.jpg" alt="Playlist thumbnail" />
-            <div className="playlist-overlay">
-              <div className="playlist-count">8 videos</div>
-              <div className="playlist-icon">
-                <Play size={24} />
-              </div>
-            </div>
-            <h3>Remote Work Setup Tours</h3>
-            <p>8 videos</p>
-          </div>
-          <div className="playlist-card">
-            <img src="/images/andybon.jpg" alt="Playlist thumbnail" />
-            <div className="playlist-overlay">
-              <div className="playlist-count">15 videos</div>
-              <div className="playlist-icon">
-                <Play size={24} />
-              </div>
-            </div>
-            <h3>Reading Vlogs From Different Countries</h3>
-            <p>15 videos</p>
-          </div>
-          <div className="playlist-card">
-            <img src="/images/andybon.jpg" alt="Playlist thumbnail" />
-            <div className="playlist-overlay">
-              <div className="playlist-count">6 videos</div>
-              <div className="playlist-icon">
-                <Play size={24} />
-              </div>
-            </div>
-            <h3>Travel Day Routines</h3>
-            <p>6 videos</p>
-          </div>
+          ))}
         </div>
       </div>
+
+      {/* Playlist Modal */}
+      {playlistModal.isOpen && playlistModal.playlist && (
+        <div className="modal-overlay" onClick={closePlaylistModal}>
+          <div className="modal-content playlist-modal-content" onClick={(e) => e.stopPropagation()}>
+            <button className="modal-close" onClick={closePlaylistModal}>
+              <X size={24} />
+            </button>
+            
+            <h2>{playlistModal.playlist.title}</h2>
+            <p className="playlist-modal-count">{playlistModal.playlist.count} videos</p>
+            
+            <div className="playlist-videos-grid">
+              {playlistModal.playlist.videos.map((video, vidIndex) => (
+                <div 
+                  key={vidIndex} 
+                  className="playlist-video-item" 
+                  onClick={() => {
+                    closePlaylistModal();
+                    openVideoModal(video.id);
+                  }}
+                >
+                  <div className="video-thumbnail">
+                    <img src="/images/andybon.jpg" alt={`Video thumbnail for ${video.title}`} />
+                    <div className="play-button-small">
+                      <Play size={24} />
+                    </div>
+                    <div className="video-duration">{video.duration}</div>
+                  </div>
+                  <h3>{video.title}</h3>
+                  <p className="vlog-date">{video.date}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   )
 }
